@@ -17,6 +17,6 @@ timer = hour + min + sec
 for i in range(timer):
     time.sleep(1)
     timer = timer - 1
-    print(f"This many seconds left, {timer}")
-    if sec == 0:
+    print(f"How many seconds left --> {timer}")
+    if timer == 0:
         print("Time is up!")
