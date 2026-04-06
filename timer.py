@@ -1,8 +1,8 @@
 import math
 import time
 
-hour = input("How long should your timer be in hours?")
-min = input("How long should your timer be in minutes?")
+hour = input("How long should your timer be in hours?(next minutes)")
+min = input("How long should your timer be in minutes?(next seconds)")
 sec = input("How long should your timer be in seconds?")
 
 hour = int(hour)
