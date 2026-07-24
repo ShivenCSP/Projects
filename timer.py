@@ -1,9 +1,9 @@
 import math
 import time
 
-hour = input("How long should your timer be in hours?(next minutes)")
-min = input("How long should your timer be in minutes?(next seconds)")
-sec = input("How long should your timer be in seconds?")
+hour = input("How long should your timer be in hours?(next will ask minutes) - ")
+min = input("How long should your timer be in minutes?(next will ask seconds) - ")
+sec = input("How long should your timer be in seconds? - ")
 
 hour = int(hour)
 min = int(min)
@@ -14,9 +14,11 @@ min = min * 60
 
 timer = hour + min + sec
 
-for i in range(timer):
+while timer>0:
+    hour1 = timer//3600
+    min1 = (timer%3600)//60
+    sec1 = timer%60
+    print(f"\rHow many seconds left --> {hour1:02}:{min1:02}:{sec1:02}", end="")
     time.sleep(1)
-    timer = timer - 1
-    print(f"How many seconds left --> {timer}")
-    if timer == 0:
-        print("Time is up!")
+    timer -= 1
+print("\nTime is up!")
